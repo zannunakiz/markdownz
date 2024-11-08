@@ -1,0 +1,84 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+  padding: 0;
+  background-color: rgb(9, 9, 42);
+}
+
+
+.editor-box, .preview-box{
+  width:90%;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 590px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  
+}
+.editor-box header, .preview-box header{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(43, 202, 227);
+  align-items: center;
+  padding: 0 20px;
+  height: 40px;
+  z-index: 1;
+  border-bottom: 1px solid black;
+  box-shadow: 0px 1px 4px black;
+  
+}
+header button{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(178, 193, 238);
+  border: none;
+  width: 28px;
+  border-radius: 50%;
+  padding: 0;
+  height: 28px;
+  overflow: hidden;
+}
+header button:hover{
+  border: 1px solid black;
+  filter: opacity(0.9);
+}
+header button:active{
+  transform: scale(0.8);
+
+}
+#editor{
+  width:100%;
+  border: none;
+}
+
+.preview-box{
+  max-width: 700px;
+  width:95%;
+}
+
+#preview{
+  width:100%;
+  border: none;
+  overflow-y: scroll;
+}
+#preview, #editor{
+  background-color: rgb(199, 246, 246);
+  padding-left: 20px;
+}
+#preview img{
+  max-width: 400px;
+}
+#preview pre {
+  background-color: white; /* White background for code block */
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+  max-width: fit-content;
+}
